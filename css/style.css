@@ -227,6 +227,9 @@ main{
     .middle .name h1 {
         font-size: 2rem; 
     }
+    .main{
+        height: 500px;
+    }
     .console-container h3 {
         font-size: 1.3rem; 
     }
