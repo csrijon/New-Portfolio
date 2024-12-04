@@ -5,13 +5,14 @@
 body{
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
+    color: #fff;
     }
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 20px;
-    background-color: #f4f4f4;
+    background-color: #000000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .black{
@@ -22,7 +23,7 @@ header {
 .left {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #b05cff;
+    color: #647c20;
 }
 
 .right ul {
@@ -35,13 +36,13 @@ header {
 
 .right ul li a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
     font-size: 1rem;
     transition: color 0.3s;
 }
 
 .right ul li a:hover {
-    color: #b05cff;
+    color: #647c20;
 }
 
 #checkbox {
@@ -64,7 +65,7 @@ header {
 .bars {
     width: 100%;
     height: 4px;
-    background-color: rgb(176, 92, 255);
+    background-color:#647c20;
     border-radius: 4px;
 }
 #text {
@@ -115,7 +116,7 @@ header {
         top: 90px;
         left: 50%;
         transform: translate(-50%, 0);
-        background-color: #fff;
+        background-color: #1a1a1a;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
         padding: 10px 20px;
@@ -139,17 +140,96 @@ header {
         display: flex;
     }
 }
-
+@media (max-width: 768px){
+    .middle{
+        margin: auto;
+    }
+}
 main{
     display: flex;
     width: 100%;
-    height: 790px;
+    height: 890px;
+    background-image: url(/image/mjy11.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
-.middle{
-    padding: 12px;
-    margin: 0px 124px;
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.middle .name h1 {
+    font-size: 2.5rem; /* Default font size for heading */
+    margin: 0 0 10px;
+}
+
+.console-container {
+    margin: 10px 0;
+}
+
+.console-container h3 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.social-media {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
 }
+
+.social-media-icon {
+    font-size: 1.5rem;
+    color: #333; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-media-icon:hover {
+    color: #0073e6; 
+}
+@media (max-width: 768px) {
+    .middle .name h1 {
+        font-size: 2rem; 
+    }
+
+    .console-container h3 {
+        font-size: 1.3rem; 
+    }
+
+    .social-media-icon {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .middle {
+        padding: 10px;
+    }
+
+    .middle .name h1 {
+        font-size: 1.8rem;
+    }
+
+    .console-container h3 {
+        font-size: 1rem; 
+    }
+
+    .social-media {
+        gap: 10px; /* Reduce gap between icons */
+    }
+
+    .social-media-icon {
+        font-size: 1rem; /* Further reduce icon size */
+    }
+}
+
