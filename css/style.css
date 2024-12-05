@@ -8,7 +8,7 @@ body{
     background-color: #f0f0f0;
     color: #fff;
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
     overflow-x: hidden;
     }
 header {
@@ -78,6 +78,7 @@ header {
     line-height: 1.5;
     height: 1em;      
     display: inline-block; 
+    font-size: 1.8rem;
 }
 
 #bar2 {
@@ -154,7 +155,7 @@ header {
 main{
     width: 100%;
     box-sizing: border-box;
-    height: 890px;
+    height: 850px;
     background-color: black;
     box-sizing: border-box;
 }
@@ -165,7 +166,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100%;
     text-align: center;
     z-index: 1;
 }
@@ -197,14 +198,6 @@ main{
     margin: 0 0 10px;
 }
 
-.console-container {
-    margin: 10px 0;
-}
-
-.console-container h3 {
-    font-size: 1.5rem;
-    margin: 0;
-}
 
 .social-media {
     display: flex;
@@ -214,21 +207,32 @@ main{
 }
 
 .social-media-icon {
-    font-size: 1.5rem;
-    color: #333; 
-    text-decoration: none;
-    transition: color 0.3s ease;
+    font-size: 1.5rem;            
+    color: white;                 
+    text-decoration: none;       
+    transition: color 0.3s ease, background-color 0.3s ease; 
+    padding: 15px;               
+    border-radius: 50%;          
+    border: 2px solid transparent;       
+    display: flex;               
+    align-items: center;         
+    justify-content: center;     
+    width: 50px;                 
+    height: 50px;                
+    background-color: rgb(60, 59, 59);     
 }
 
 .social-media-icon:hover {
-    color: #0073e6; 
+    color:white;                  /* Changes icon color on hover */
+    background-color: #647c20;   /* Subtle background change on hover */
 }
+
 @media (max-width: 768px) {
     .middle .name h1 {
-        font-size: 2rem; 
+        font-size: 1.8rem; 
     }
     .main{
-        height: 500px;
+        height: 300px;
     }
     .console-container h3 {
         font-size: 1.3rem; 
@@ -245,7 +249,7 @@ main{
     }
 
     .middle .name h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .console-container h3 {
@@ -260,4 +264,36 @@ main{
         font-size: 1rem; /* Further reduce icon size */
     }
 }
-
+footer{
+    width: 100%;
+    height: 100%;
+    background-color:#0f0f0f;
+}
+.mainfooter{
+    width: 100%;
+    height: 100%;
+    background-color: #0f0f0f;
+    padding: 25px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.firstfooter{
+    padding: 5px;
+}
+.secondfooter{
+    padding: 5px;
+ }
+.thirdfooter{
+     padding: 5px;
+     display:flex ;
+     align-items: center;
+     gap: 30px;
+}
+.thirdfooter a{
+    border: 2px solid red;
+    padding: 10px;
+    border-radius: 50%;
+}
