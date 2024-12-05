@@ -16,7 +16,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 20px;
-    background-color: #000000;
+    background-color: #c0bbbb;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 100%;
     box-sizing: border-box;
@@ -155,7 +155,7 @@ header {
 main{
     width: 100%;
     box-sizing: border-box;
-    height: 850px;
+    height: 700px;
     background-color: black;
     box-sizing: border-box;
 }
