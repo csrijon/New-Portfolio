@@ -1,4 +1,4 @@
-consoleText(['Learn.', 'Build.','Solve.', 'Transcend.'], 'text',['#4585f3','#ec4434','#0d9c5c','#fcbd0a']);
+consoleText([' I am a Fullstack Web Developer', 'An Designer','Photographer', 'Love Cricket '], 'text',['#18d26e','#18d26e','#18d26e','#18d26e']);
 
 function consoleText(words, id, colors) {
   if (colors === undefined) colors = ['#fff'];
