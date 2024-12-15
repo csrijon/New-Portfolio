@@ -1,4 +1,4 @@
-
+let Resume = document.querySelector('.Resume');
 let About = document.querySelector('.About');
 let main = document.querySelector('main');
 
@@ -166,4 +166,9 @@ About.addEventListener('click', (e) => {
     </div>
 </section>`
 });
+
+Resume.addEventListener("click", (e) => {
+    main.innerHTML = '';
+    main.innerHTML = ``
+})
 
