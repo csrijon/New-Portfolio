@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="#18d26e">
+  <!-- Support Icon: Headset -->
+  <circle cx="12" cy="12" r="10" stroke="#18d26e" stroke-width="2" fill="none" />
+  <path d="M7 12a5 5 0 0 1 10 0v4a2 2 0 0 1-2 2h-1v-3h-6v3h-1a2 2 0 0 1-2-2v-4z" fill="#18d26e" />
+  <circle cx="9" cy="16" r="1" fill="#18d26e" />
+  <circle cx="15" cy="16" r="1" fill="#18d26e" />
+</svg>

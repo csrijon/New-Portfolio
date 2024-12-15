@@ -12,7 +12,7 @@ About.addEventListener('click', (e) => {
      </div>
      <section class="about-section">
         <div class="image-container">
-            <img src="/image/" alt="Profile Image">
+            <img src="/image/WhatsApp_Image_2024-12-13_at_8.35.50_PM-removebg-preview.png" alt="Profile Image">
         </div>
         <div class="info-container">
             <h1>UI/UX Designer & Web Developer.</h1>
@@ -61,7 +61,12 @@ About.addEventListener('click', (e) => {
           <div class="label">Hard Workers</div>
         </div>
       </div>
-
+      <section id="Skill-section">
+        <div class="skills-container">
+        <span class="skills-subtitle">SKILLS</span>
+        <div class="skills-underline"></div>
+      </div>
+      <h1 class="skills-main-title">MY SKILLS</h1>
       <div class="skills-section">
         <div class="skill">
             <div class="skill-title">HTML</div>
@@ -100,9 +105,14 @@ About.addEventListener('click', (e) => {
             </div>
         </div>
     </div>
+</section>
 
     <div class="features-section">
-        <h2>FEATURES<br> I'M INTERESTED IN</h2>
+          <div class="Feature">
+        <span class="span-features" >FEATURES</span>
+        <div class="skills-underline"></div>
+    </div>
+    <div class="Feature-interested" >I'M INTERESTED IN</div>
         <div class="features-grid">
             <div class="feature-card">
                 <span class="feature-icon">&#x1F441;</span>
