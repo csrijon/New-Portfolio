@@ -1,27 +1,38 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.resume-name {
+  text-align: center; /* Centers content */
+  margin-bottom: 30px; /* Adds spacing below */
+  background-color: #f9f9f9; /* Light background for the container */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-body {
-  background-color: #000;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+.resume-name h1 {
+  font-size: 2.5rem;
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.resume-name p {
+  font-size: 1rem;
+  color: #555;
   margin: 0;
+  line-height: 1.5;
 }
 
 .resume-container {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 80px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  background-color: black;
+ max-height: 100vh; 
+  overflow: hidden;
 }
-
-/* Left and Right Sections */
 .left-section, .right-section {
   flex: 1;
   padding: 20px;
@@ -79,7 +90,7 @@ h2 {
   background-color: #00ff99;
 }
 
-h2::after {
+/* h2::after {
   content: "";
   position: absolute;
   width: 100px;
@@ -87,7 +98,7 @@ h2::after {
   background-color: #00ff99;
   bottom: -5px;
   left: 0;
-}
+} */
 
 /* Responsive Design */
 @media (max-width: 768px) {

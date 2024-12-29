@@ -1,12 +1,11 @@
 .About-section {
-  width: 100%;
-  background-color: #000000;
   padding-top: 80px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
   box-sizing: border-box;
   margin: 0;
+  width: 100%;
 }
 
 .aboutfirst {
@@ -236,9 +235,6 @@
 }
 
 @media (max-width: 768px) {
-  body {
-    padding: 10px;
-  }
 
   .skills-section {
     width: 100%;
@@ -338,7 +334,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  padding: 20px 20px 0px 20px;
+  padding: 20px 20px 5px 20px;
   margin-left: 60px;
   margin-right: 60px;
 }
@@ -360,7 +356,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  padding: 20px 20px 0px 20px;
+  padding: 20px 20px 5px 20px;
   margin-left: 60px;
   margin-right: 60px;
 }
