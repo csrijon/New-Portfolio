@@ -2,6 +2,8 @@ let Resume = document.querySelector('.Resume');
 let About = document.querySelector('.About');
 let main = document.querySelector('main');
 let Services = document.querySelector('.Services');
+let Contact = document.querySelector(".Contact")
+
 
 About.addEventListener('click', (e) => {
     e.preventDefault();
@@ -9,12 +11,12 @@ About.addEventListener('click', (e) => {
     main.style.height = 'auto';
     main.style.background = '#000';
     main.innerHTML = `
-        <section class="About-section">
-        <div class="aboutfirst">
+        <section class="About-section " data-wow-delay="0.5s"   >
+        <div class="aboutfirst wow fadeInUp" style = " animation-delay: 0.1s;" >
             <h2>About</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, consequuntur?</p>
         </div>
-        <section class="about-section">
+        <section class="about-section wow fadeInUp" data-wow-delay="0.1s" style = " animation-delay: 0.2s; >
             <div class="image-container">
                 <img src="/image/WhatsApp_Image_2024-12-13_at_8.35.50_PM-removebg-preview.png" alt="Profile Image">
             </div>
@@ -44,22 +46,22 @@ About.addEventListener('click', (e) => {
         </section>
 
         <div class="stats-container">
-            <div class="stat-card">
+            <div class="stat-card wow fadeInUp" data-wow-delay="0.1s" style = " animation-delay: 0.3s;" >
             <div class="icon"><img src="/image/smile-icon.svg" alt="Happy Clients"></div>
             <div class="number">232</div>
             <div class="label">Happy Clients</div>
             </div>
-            <div class="stat-card">
+            <div class="stat-card wow fadeInUp" data-wow-delay="0.1s" style = " animation-delay: 0.4s;">
             <div class="icon"><img src="projects-icon.svg" alt="Projects"></div>
             <div class="number">521</div>
             <div class="label">Projects</div>
             </div>
-            <div class="stat-card">
+            <div class="stat-card wow fadeInUp" data-wow-delay="0.1s" style = " animation-delay: 0.5s;" >
             <div class="icon"><img src="support-icon.svg" alt="Hours of Support"></div>
             <div class="number">1463</div>
             <div class="label">Hours Of Support</div>
             </div>
-            <div class="stat-card">
+            <div class="stat-card wow fadeInUp " data-wow-delay="0.1s" style = " animation-delay: 0.6s;">
             <div class="icon"><img src="workers-icon.svg" alt="Hard Workers"></div>
             <div class="number">15</div>
             <div class="label">Hard Workers</div>
@@ -178,7 +180,7 @@ Resume.addEventListener("click", (e) => {
     main.style.height = '100%';
     main.innerHTML = `
     <div class="resume-container">
-    <div class="left-section">
+    <div class="left-section wow fadeInLeft">
       <h2>Sumary</h2>
       <div class="section-item">
         <div class="timeline-icon"></div>
@@ -207,7 +209,7 @@ Resume.addEventListener("click", (e) => {
         <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius.</p>
       </div>
     </div>
-    <div class="right-section">
+    <div class="right-section wow fadeInRight ">
       <h2>Professional Experience</h2>
       <div class="section-item">
         <div class="timeline-icon"></div>
@@ -233,28 +235,29 @@ Resume.addEventListener("click", (e) => {
       </div>
     </div>
   </div>`
+    new WOW().init();
 })
-Services.addEventListener("click",(e) => {
+Services.addEventListener("click", (e) => {
     e.preventDefault();
     main.innerHTML = '';
     main.style.background = '#000';
     main.innerHTML = `
       <div class="card-container">
-    <div class="card">
+    <div class="card wow fadeInLeft">
       <div class="icon">
         <span class="material-icons">brush</span>
       </div>
       <h3>Web Design</h3>
       <p>The most modern and high-quality design made at a professional level.</p>
     </div>
-    <div class="card">
+    <div class="card wow fadeInRight">
       <div class="icon">
         <span class="material-icons">code</span>
       </div>
       <h3>Web Development</h3>
       <p>High-quality development of sites at the professional level.</p>
     </div>
-    <div class="card">
+    <div class="card wow fadeInLeft">
       <div class="icon">
         <span class="material-icons">photo_camera</span>
       </div>
@@ -264,20 +267,32 @@ Services.addEventListener("click",(e) => {
   </div>`
 })
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
+    new WOW().init();
     VANTA.DOTS({
-el: "#rings",
-mouseControls: true,
-touchControls: true,
-gyroControls: false,
-minHeight: 200.00,
-minWidth: 200.00,
-scale: 1.00,
-scaleMobile: 1.00,
-color: "#18d26e",
-color2: "#18d26e",
-backgroundColor:"black"
-})
-})
+        el: "#rings",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: "#18d26e",
+        color2: "#18d26e",
+        backgroundColor: "black"
+    })
+});
+Contact.addEventListener("click",(e) => {
+  e.preventDefault();
+  main.innerHTML = '';
+  main.style.background = '#000';
+  main.innerHTML = `
+      <form>      
+        <input name="name" type="text" class="feedback-input" placeholder="Name" />   
+        <input name="email" type="text" class="feedback-input" placeholder="Email" />
+        <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+        <input type="submit" value="SUBMIT"/>
+      </form>`
+}
+)
