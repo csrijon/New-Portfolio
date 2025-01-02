@@ -2,8 +2,10 @@ let Resume = document.querySelector('.Resume');
 let About = document.querySelector('.About');
 let main = document.querySelector('main');
 let Services = document.querySelector('.Services');
-let Contact = document.querySelector(".Contact")
+let Contact = document.querySelector(".Contact");
+let Portfolio =  document.querySelector('.Portfolios');
 
+document.addEventListener('DOMContentLoaded', () => {
 
 About.addEventListener('click', (e) => {
     e.preventDefault();
@@ -180,6 +182,9 @@ Resume.addEventListener("click", (e) => {
     main.style.height = '100%';
     main.innerHTML = `
     <div class="resume-container">
+     <div class="resume-header">
+    <h1>Resume</h1>
+  </div>
     <div class="left-section wow fadeInLeft">
       <h2>Sumary</h2>
       <div class="section-item">
@@ -208,41 +213,19 @@ Resume.addEventListener("click", (e) => {
         <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
         <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius.</p>
       </div>
-    </div>
-    <div class="right-section wow fadeInRight ">
-      <h2>Professional Experience</h2>
-      <div class="section-item">
-        <div class="timeline-icon"></div>
-        <h3>SENIOR GRAPHIC DESIGN SPECIALIST</h3>
-        <p><strong>2019 - Present</strong></p>
-        <p><em>Experion, New York, NY</em></p>
-        <ul>
-          <li>Lead in the design, development, and implementation of graphic, layout, and production communication materials</li>
-          <li>Delegate tasks to team members and provide counsel on all aspects of the project</li>
-          <li>Oversee project budgets ranging from $2,000 - $25,000</li>
-        </ul>
-      </div>
-      <div class="section-item">
-        <div class="timeline-icon"></div>
-        <h3>GRAPHIC DESIGN SPECIALIST</h3>
-        <p><strong>2017 - 2018</strong></p>
-        <p><em>Stepping Stone Advertising, New York, NY</em></p>
-        <ul>
-          <li>Developed marketing programs: logos, brochures, infographics, presentations</li>
-          <li>Managed up to 5 projects simultaneously</li>
-          <li>Recommended design strategies for clients</li>
-        </ul>
-      </div>
+    </div>  
     </div>
   </div>`
     new WOW().init();
 })
 Services.addEventListener("click", (e) => {
     e.preventDefault();
-    main.innerHTML = '';
-    main.style.background = '#000';
+    main.innerHTML = ''; // Clear the main content
+    main.style.background = '#000'; // Set the background color
     main.innerHTML = `
-      <div class="card-container">
+       <section class="services-section" >
+    <h2 class="services-title">Our Services</h2>
+  <div class="card-container">
     <div class="card wow fadeInLeft">
       <div class="icon">
         <span class="material-icons">brush</span>
@@ -264,25 +247,10 @@ Services.addEventListener("click", (e) => {
       <h3>Mobile Photography</h3>
       <p>I make high-quality photos of any category at a professional level.</p>
     </div>
-  </div>`
-})
-
-document.addEventListener('DOMContentLoaded', () => {
-    new WOW().init();
-    VANTA.DOTS({
-        el: "#rings",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: "#18d26e",
-        color2: "#18d26e",
-        backgroundColor: "black"
-    })
+  </div>
+</section>`;
 });
+
 Contact.addEventListener("click",(e) => {
   e.preventDefault();
   main.innerHTML = '';
@@ -294,5 +262,37 @@ Contact.addEventListener("click",(e) => {
         <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
         <input type="submit" value="SUBMIT"/>
       </form>`
-}
-)
+});
+
+Portfolio.addEventListener("click",(e) => {
+    e.preventDefault();
+    main.innerHTML = '';
+    main.style.background = '#000'; 
+    main.innerHTML = `
+     <section class="Portfolio" >
+     <div class="first-section">
+        <h1>Portfolio</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quia.</p>
+     </div>
+     <div class="secend-section">
+        <ul>
+            <li>all</li>
+            <li>design</li>
+            <li>development</li>
+            <li>photography</li>
+        </ul>
+     </div>
+     <div class="third-section">
+        <div class="img">
+            <a href=""><img src="/image/WhatsApp_Image_2024-12-13_at_8.35.50_PM-removebg-preview.png" alt=""></a>
+            <a href=""><img src="/image/WhatsApp_Image_2024-12-13_at_8.35.50_PM-removebg-preview.png" alt=""></a>
+            <a href=""><img src="/image/WhatsApp_Image_2024-12-13_at_8.35.50_PM-removebg-preview.png" alt=""></a>
+            <a href=""><img src="/image/WhatsApp_Image_2024-12-13_at_8.35.50_PM-removebg-preview.png" alt=""></a>
+            <a href=""><img src="/image/WhatsApp_Image_2024-12-13_at_8.35.50_PM-removebg-preview.png" alt=""></a>
+            <a href=""><img src="/image/WhatsApp_Image_2024-12-13_at_8.35.50_PM-removebg-preview.png" alt=""></a>
+        </div>
+     </div>
+    </section>`
+});
+});
+

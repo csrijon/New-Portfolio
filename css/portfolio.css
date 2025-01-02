@@ -1,14 +1,14 @@
 /* General Styles */
 .Portfolio {
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     box-sizing: border-box;
     overflow-x: hidden;
-    padding: 20px; /* Add padding for smaller screens */
+    padding: 20px; 
+    padding-top: 70px;
 }
 
 .first-section {
@@ -78,20 +78,20 @@
 
 .third-section {
     padding: 20px;
-    background-color: #f9f9f9; /* Light background for contrast */
+    /* background-color: #f9f9f9; Light background for contrast */
     text-align: center;
 }
 
 .third-section .img {
     display: flex;
-    flex-wrap: wrap; /* Allows images to wrap to the next row */
     gap: 15px; /* Spacing between images */
     justify-content: center; /* Centers the images */
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 .third-section .img img {
-    max-width: calc(33.33% - 10px); /* Each image takes up 1/3 of the container minus gap space */
+    max-width: 300px;
     height: auto;
     border-radius: 10px; /* Adds rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */

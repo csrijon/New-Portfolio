@@ -200,7 +200,7 @@ main {
     flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
-.social-media-icon {
+.social-media-icon{
     display: flex;
     justify-content: center;
     align-items: center;

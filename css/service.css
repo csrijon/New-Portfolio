@@ -7,7 +7,19 @@
     align-items: center;
     padding: 20px;
   }
-  
+  .services-title {
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem 0;
+    font-weight: bold;
+  }
+  .services-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
   .card {
     background-color: #1e1e1e;
     border: 1px solid #333;

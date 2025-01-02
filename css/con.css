@@ -1,46 +1,78 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-body { background:rgb(30,30,40); }
-form { max-width:420px; margin:50px auto; }
+/* Form Container */
+form {
+  max-width: 90%; /* Adapts to smaller screens */
+  margin: 20px auto;
+  padding: 20px; /* Adds spacing inside the form */
+  background-color: rgba(0, 0, 0, 0.8); /* Optional: Form background color */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Adds depth */
+}
 
+/* Input Fields */
 .feedback-input {
-  color:white;
+  color: white;
   font-family: Helvetica, Arial, sans-serif;
-  font-weight:500;
-  font-size: 18px;
+  font-weight: 500;
+  font-size: 16px; /* Adjusted for better fit on smaller screens */
   border-radius: 5px;
-  line-height: 22px;
+  line-height: 1.5;
   background-color: transparent;
-  border:2px solid #CC6666;
+  border: 2px solid #18d26e;
   transition: all 0.3s;
-  padding: 13px;
+  padding: 10px; /* Adjusted padding for responsiveness */
   margin-bottom: 15px;
-  width:100%;
+  width: 100%;
   box-sizing: border-box;
-  outline:0;
+  outline: none;
 }
 
-.feedback-input:focus { border:2px solid #CC4949; }
+.feedback-input:focus {
+  border: 2px solid #CC4949;
+}
 
+/* Textarea */
 textarea {
-  height: 150px;
-  line-height: 150%;
-  resize:vertical;
+  height: 120px; /* Adjusted height for smaller screens */
+  resize: vertical;
 }
 
+/* Submit Button */
 [type="submit"] {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   width: 100%;
-  background:#CC6666;
-  border-radius:5px;
-  border:0;
-  cursor:pointer;
-  color:white;
-  font-size:24px;
-  padding-top:10px;
-  padding-bottom:10px;
+  background: #18d26e;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 20px; /* Reduced for responsiveness */
+  padding: 10px;
   transition: all 0.3s;
-  margin-top:-4px;
-  font-weight:700;
+  margin-top: 10px;
+  font-weight: 700;
 }
-[type="submit"]:hover { background:#CC4949; }
+
+[type="submit"]:hover {
+  background: #CC4949;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .feedback-input {
+    font-size: 14px; /* Smaller text for smaller devices */
+    padding: 8px;
+  }
+
+  [type="submit"] {
+    font-size: 18px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  textarea {
+    height: 100px; /* Further adjustment for very small screens */
+  }
+}

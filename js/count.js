@@ -48,3 +48,19 @@ function consoleText(words, id, colors) {
     }
   }, 400)
 }
+document.addEventListener('DOMContentLoaded', () => {
+  new WOW().init();
+  VANTA.DOTS({
+      el: "#rings",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: "#18d26e",
+      color2: "#18d26e",
+      backgroundColor: "black"
+  })
+});
