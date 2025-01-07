@@ -1,117 +1,105 @@
-/* General Styles */
-.Portfolio {
+.head {
+    padding: 10px 0;
+    text-align: center;
+}
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    padding: 20px; 
-    padding-top: 70px;
+    height: 80%;
+    gap: 30px;
+    padding-top: 10px;
 }
-
-.first-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center; /* Center-align text for better readability on smaller screens */
-}
-
-.secend-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-    gap: 20px; /* Add gap between elements */
-}
-
-.secend-section ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap; /* Wrap list items for smaller screens */
-    padding: 0; /* Remove default padding */
-}
-
-.secend-section ul li {
+.categories {
     list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .Portfolio {
-        flex-direction: column; /* Stack elements vertically */
-        padding: 10px; /* Reduce padding for smaller screens */
-    }
-
-    .first-section {
-        padding: 10px; /* Add some spacing inside the section */
-    }
-
-    .secend-section {
-        /* flex-direction: row; Stack items vertically */
-        gap: 15px; /* Adjust gap for smaller screens */
-    }
-
-    .secend-section ul {
-        /* flex-direction: column; Stack list items vertically */
-        gap: 5px; /* Reduce gap between list items */
-    }
-}
-
-@media (max-width: 480px) {
-    .Portfolio {
-        padding: 5px; /* Further reduce padding for very small screens */
-    }
-
-    .first-section {
-        font-size: 14px; /* Adjust font size for smaller screens */
-    }
-
-    .secend-section ul li {
-        font-size: 15px; /* Make list items smaller for very small screens */
-    }
-}
-
-.third-section {
-    padding: 20px;
-    /* background-color: #f9f9f9; Light background for contrast */
+.mains{
     text-align: center;
 }
 
-.third-section .img {
+.categories li {
+    display: inline-block;
+}
+
+.categories li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.categories li a.active,
+.categories li a:hover {
+    color: #0f0;
+}
+
+.gallery {
     display: flex;
-    gap: 15px; /* Spacing between images */
-    justify-content: center; /* Centers the images */
-    margin: 0 auto;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Allow items to wrap to next row */
+    gap: 15px;
+    justify-content: center; /* Center align gallery items */
+    padding: 20px;
+}
+.img {
+    position: relative; /* Required for positioning the caption */
+    flex: 1 1 400px;
+    max-width: 400px;
+    box-sizing: border-box;
 }
 
-.third-section .img img {
-    max-width: 300px;
+.img img {
+    width: 50%;
     height: auto;
-    border-radius: 10px; /* Adds rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation for hover effect */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.third-section .img img:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+.img .caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
+.img:hover .caption {
+    opacity: 1; /* Show caption on hover */
+}
+
+.img img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .third-section .img img {
-        max-width: calc(50% - 10px); /* Images take up half of the container on smaller screens */
+    .gallery {
+        gap: 10px;
+    }
+    .categories li a {
+        font-size: 14px;
     }
 }
 
 @media (max-width: 480px) {
-    .third-section .img img {
-        max-width: 100%; /* Images take the full width of the container on very small screens */
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    .categories li a {
+        font-size: 12px;
     }
 }
-

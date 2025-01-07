@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume UI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .column {
+            flex: 1;
+            padding: 10px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .timeline {
+            border-left: 3px solid #007bff;
+            padding-left: 15px;
+            margin-left: 10px;
+        }
+        .timeline-item {
+            margin-bottom: 15px;
+        }
+        .timeline-item h3 {
+            font-size: 18px;
+        }
+        .contact {
+            list-style: none;
+            padding: 0;
+            margin: 5px 0;
+        }
+        .contact li {
+            margin-bottom: 5px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .column {
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Column: Summary and Education -->
+        <div class="column">
+            <div class="section">
+                <h2>Summary</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>BRANDON JOHNSON</h3>
+                        <p>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</p>
+                        <ul class="contact">
+                            <li>Portland par 127, Orlando, FL</li>
+                            <li>(123) 456-7891</li>
+                            <li>alice.barkley@example.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Education</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>MASTER OF FINE ARTS & GRAPHIC DESIGN</h3>
+                        <p>2015 - 2016</p>
+                        <p>Rochester Institute of Technology, Rochester, NY</p>
+                        <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>BACHELOR OF FINE ARTS & GRAPHIC DESIGN</h3>
+                        <p>2010 - 2014</p>
+                        <p>Rochester Institute of Technology, Rochester, NY</p>
+                        <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Professional Experience -->
+        <div class="column">
+            <div class="section">
+                <h2>Professional Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>SENIOR GRAPHIC DESIGN SPECIALIST</h3>
+                        <p>2019 - Present</p>
+                        <p>Experion, New York, NY</p>
+                        <ul>
+                            <li>Lead in the design, development, and implementation of graphic communication materials.</li>
+                            <li>Delegate tasks to a 7-member design team.</li>
+                            <li>Supervise quality and accuracy of graphic materials.</li>
+                            <li>Manage project budgets from $2,000 - $25,000.</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>GRAPHIC DESIGN SPECIALIST</h3>
+                        <p>2017 - 2018</p>
+                        <p>Stepping Stone Advertising, New York, NY</p>
+                        <ul>
+                            <li>Developed marketing programs and design presentations.</li>
+                            <li>Managed up to 5 projects under pressure.</li>
+                            <li>Recommended graphic design strategies to clients.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

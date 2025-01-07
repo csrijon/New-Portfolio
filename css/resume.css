@@ -1,110 +1,65 @@
-.resume-name {
-  text-align: center; /* Centers content */
-  margin-bottom: 30px; /* Adds spacing below */
-  background-color: #f9f9f9; /* Light background for the container */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-.resume-name h1 {
-  font-size: 2.5rem;
-  margin: 0 0 10px;
-  color: #333;
-}
-
-.resume-name p {
-  font-size: 1rem;
-  color: #555;
-  margin: 0;
-  line-height: 1.5;
-}
-.resume-header{
-  padding-bottom: 30px;
-}
-
-.resume-container {
+.res-section{
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding-top: 80px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  gap: 20px;
-  padding-bottom: 20px;
-  box-sizing: border-box;
-  background-color: black;
-  overflow: hidden;
-}
-.left-section, .right-section {
-  flex: 1;
+  align-items: center;
   padding: 20px;
-  min-width: 300px;
+  font-family: Arial, sans-serif;
+  color: white;
 }
-
+.column {
+  flex: 1;
+  padding: 10px;
+}
 h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  position: relative;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
-
-.section-item {
-  position: relative;
-  padding-left: 30px;
+h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.section {
   margin-bottom: 20px;
 }
-
-.section-item h3 {
+.timeline {
+  border-left: 3px solid #18d26e;
+  padding-left: 15px;
+  margin-left: 10px;
+}
+.timeline ul{
+  list-style-type: none;
+}
+.timeline-item {
+  margin-bottom: 15px;
+}
+.timeline-item h3 {
   font-size: 18px;
 }
-
-.section-item p {
-  font-size: 14px;
-}
-
-.section-item ul {
+.contact {
   list-style: none;
-  margin-top: 10px;
+  padding: 0;
+  margin: 5px 0;
 }
-
-.section-item ul li {
+.contact li {
   margin-bottom: 5px;
 }
 
-/* Timeline Icon and Line */
-.timeline-icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 10px;
-  height: 10px;
-  border: 2px solid #00ff99;
-  border-radius: 50%;
-  background-color: #000;
-}
-
-.section-item::before {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 4px;
-  height: 100%;
-  width: 2px;
-  background-color: #00ff99;
-}
-
-/* h2::after {
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 2px;
-  background-color: #00ff99;
-  bottom: -5px;
-  left: 0;
-} */
-
-/* Responsive Design */
+/* Media Queries */
 @media (max-width: 768px) {
-  .resume-container {
-    flex-direction: column;
+  .container {
+      flex-direction: column;
+  }
+  .column {
+      padding: 5px;
   }
 }
