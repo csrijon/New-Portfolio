@@ -1,22 +1,13 @@
-
-let Resume = document.querySelector('.Resume');
-let About = document.querySelector('.About');
-let main = document.querySelector('main');
-let Services = document.querySelector('.Services');
-let Contact = document.querySelector(".Contact");
-let Portfolio =  document.querySelector('.Portfolios');
-let Frontend =  document.querySelector('.Frontend');
-
 document.addEventListener('DOMContentLoaded', () => {
-
-About.addEventListener('click', (e) => {
-    e.preventDefault();
-    main.innerHTML = '';
-    checkbox.checked = false;
-    main.style.height = 'auto';
-    main.style.background = '#000';
-    main.innerHTML = `
-        <section class="About-section "  >
+    let Resume = document.querySelector('.Resume');
+    let About = document.querySelector('.About');
+    let main = document.querySelector('main');
+    let Services = document.querySelector('.Services');
+    let Contact = document.querySelector(".Contact");
+    let Portfolio = document.querySelector('.Portfolios');
+    
+    const aboutsection = `
+            <section class="About-section "  >
         <div class="aboutfirst wow fadeInLeftBig" style = " animation-delay: 0.1s;" >
             <h2>About</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, consequuntur?</p>
@@ -175,17 +166,18 @@ About.addEventListener('click', (e) => {
                 </div>
             </div>
         </div>
-    </section>`
-});
+    </section>` 
 
-Resume.addEventListener("click", (e) => {
-    e.preventDefault();
-    main.innerHTML = '';
-    main.style.background = '#000';
-    main.style.height = '100%';
-    checkbox.checked = false;
-    main.innerHTML = `
-    <div class="res-section">
+    About.addEventListener('click', (e) => {
+        e.preventDefault();
+        checkbox.checked = false;
+        main.style.height = 'auto';
+        main.style.background = '#000';
+        main.innerHTML = aboutsection;
+    });
+
+const resumesection = `
+<div class="res-section">
     <div class="res wow fadeInLeftBig ">
       <h2>Resume</h2>
      </div>
@@ -257,15 +249,17 @@ Resume.addEventListener("click", (e) => {
         </div>
     </div>
     </div>`
-    new WOW().init();
-})
-Services.addEventListener("click", (e) => {
-    e.preventDefault();
-    main.innerHTML = ''; // Clear the main content
-    main.style.background = '#000';
-    checkbox.checked = false;
-    main.innerHTML = `
-       <section class="services-section" >
+
+    Resume.addEventListener("click", (e) => {
+        e.preventDefault();
+        main.style.background = '#000';
+        main.style.height = '100%';
+        checkbox.checked = false;
+        main.innerHTML = resumesection
+        new WOW().init();
+    })
+
+const servicessection = ` <section class="services-section" >
     <h2 class="services-title wow fadeInLeftBig ">Our Services</h2>
   <div class="card-container">
     <div class="card wow fadeInLeft">
@@ -290,15 +284,18 @@ Services.addEventListener("click", (e) => {
       <p>I make high-quality photos of any category at a professional level.</p>
     </div>
   </div>
-</section>`;
-});
+</section>`
 
-Contact.addEventListener("click",(e) => {
-  e.preventDefault();
-  main.innerHTML = '';
-  main.style.background = '#000';
-  main.innerHTML = `
-  <div class="contactus">
+    Services.addEventListener("click", (e) => {
+        e.preventDefault();
+        main.innerHTML = ''; // Clear the main content
+        main.style.background = '#000';
+        checkbox.checked = false;
+        main.innerHTML = servicessection
+;
+    });
+
+    const contactsection = `<div class="contactus">
       <h2>Portfolio</h2>
       <form>      
         <input name="name" type="text" class="feedback-input" placeholder="Name" />   
@@ -307,13 +304,14 @@ Contact.addEventListener("click",(e) => {
         <input type="submit" value="SUBMIT"/>
       </form>
     </div>`
-});
 
-Portfolio.addEventListener("click",(e) => {
-    e.preventDefault();
-    main.innerHTML = '';
-    main.style.background = '#000'; 
-    main.innerHTML = `
+    Contact.addEventListener("click", (e) => {
+        e.preventDefault();
+        main.innerHTML = '';
+        main.style.background = '#000';
+        main.innerHTML = contactsection
+    });
+const Portfoliosection = `
     <div class="portfolio">
       <div class="port">
         <h2>Portfolio</h2>
@@ -322,8 +320,8 @@ Portfolio.addEventListener("click",(e) => {
         <div class="nav">
           <ul class="categories">
             <li><a href="#" class="active">All</a></li>
-            <li><a  class = "Frontend" href="#">Frontend</a></li>
-            <li><a href="#">FullStack</a></li>
+            <li><a  class="Front-project" href="#">Frontend</a></li>
+            <li><a  class="full-project" href="#">FullStack</a></li>
             <li><a href="#">Photography</a></li>
           </ul>
         </div>
@@ -362,7 +360,7 @@ Portfolio.addEventListener("click",(e) => {
             <img src="/image/Currency Coverter.png" alt="Portfolio Item 8">
             <div class="caption">Portfolio Item 8</div>
           </div>
-          <div class="img">
+          <div class="img back">
             <img src="/image/Analog Clock.png" alt="Portfolio Item 9">
             <div class="caption">Portfolio Item 9</div>
           </div>
@@ -372,13 +370,34 @@ Portfolio.addEventListener("click",(e) => {
           </div>
         </section>
       </div>
-    </div>`;        
-});
-});
+    </div>`
+    Portfolio.addEventListener("click", (e) => {
+        main.innerHTML = '';
+        main.style.background = '#000';
+        main.innerHTML = Portfoliosection;
+        let allpicture = document.querySelectorAll('.gallery .img  ');
+        let frontend = document.querySelector('.Front-project');
+        frontend.addEventListener("click", (e) => {
+            allpicture.forEach((picture) => {
+                if (picture.classList.contains("Front")) {
+                    picture.style.display = "block";
+                } else {
+                    picture.style.display = "none";
+                }
+            });
+        });
 
-Frontend.addEventListener("click",(e) => {
-  e.preventDefault();
-if (Frontend.classList.contains('Front')) {
+        let fullstack = document.querySelector('.full-project');
+        fullstack.addEventListener("click",(e) => {
+          allpicture.forEach((picture) => {
+            if (picture.classList.contains("back")) {
+                picture.style.display = "block";
+            }else{
+                picture.style.display = "none";
+            }
+          });
+        });
+
+    });
     
-    
-}});
+});
