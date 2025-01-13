@@ -319,10 +319,10 @@ const Portfoliosection = `
       <div class="head">
         <div class="nav">
           <ul class="categories">
-            <li><a href="#" class="active">All</a></li>
-            <li><a  class="Front-project" href="#">Frontend</a></li>
-            <li><a  class="full-project" href="#">FullStack</a></li>
-            <li><a href="#">Photography</a></li>
+            <a href="#" class="active">All</a>
+            <a  class="Front-project" href="#">Frontend</a>
+            <a  class="full-project" href="#">FullStack</a>
+            <a href="#">Photography</a>
           </ul>
         </div>
       </div>    
@@ -372,13 +372,17 @@ const Portfoliosection = `
       </div>
     </div>`
     Portfolio.addEventListener("click", (e) => {
+        e.preventDefault();
         main.innerHTML = '';
         main.style.background = '#000';
         main.innerHTML = Portfoliosection;
-        let allpicture = document.querySelectorAll('.gallery .img  ');
+        let allpicture = document.querySelectorAll('.gallery .img');
+        
         let frontend = document.querySelector('.Front-project');
+        console.log(frontend);
         frontend.addEventListener("click", (e) => {
             allpicture.forEach((picture) => {
+                console.log(picture);
                 if (picture.classList.contains("Front")) {
                     picture.style.display = "block";
                 } else {
@@ -386,18 +390,17 @@ const Portfoliosection = `
                 }
             });
         });
-
-        let fullstack = document.querySelector('.full-project');
-        fullstack.addEventListener("click",(e) => {
-          allpicture.forEach((picture) => {
-            if (picture.classList.contains("back")) {
-                picture.style.display = "block";
-            }else{
-                picture.style.display = "none";
-            }
-          });
-        });
-
-    });
     
+        let fullstack = document.querySelector('.full-project');
+        fullstack.addEventListener("click", (e) => {
+            console.log("fullstack clicked");
+            allpicture.forEach((picture) => {
+                if (picture.classList.contains("back")) {
+                    picture.style.display = "block";
+                } else {
+                    picture.style.display = "none";
+                }
+            });
+        });
+    });
 });
