@@ -134,7 +134,7 @@ header {
 
 @media (max-width: 768px) {
     .right {
-        opacity: 0;
+        display: none;
         position: absolute;
         top: 90px;
         left: 50%;
@@ -156,7 +156,7 @@ header {
     }
 
     #checkbox:checked ~ .right {
-        opacity: 1;
+        display: block;
         
     }
 
@@ -252,6 +252,7 @@ footer{
     width: 100%;
     background-color:#0f0f0f;
     z-index: 5;
+    position: relative;
 }
 .mainfooter{
     width: 100%;

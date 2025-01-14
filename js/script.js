@@ -253,7 +253,7 @@ const resumesection = `
     Resume.addEventListener("click", (e) => {
         e.preventDefault();
         main.style.background = '#000';
-        main.style.height = '100%';
+        main.style.height = '100vh';
         checkbox.checked = false;
         main.innerHTML = resumesection
         new WOW().init();
@@ -291,10 +291,8 @@ const servicessection = ` <section class="services-section" >
         main.innerHTML = ''; // Clear the main content
         main.style.background = '#000';
         checkbox.checked = false;
-        main.innerHTML = servicessection
-;
+        main.innerHTML = servicessection;
     });
-
     const contactsection = `<div class="contactus">
       <h2>Portfolio</h2>
       <form>      
@@ -319,10 +317,10 @@ const Portfoliosection = `
       <div class="head">
         <div class="nav">
           <ul class="categories">
-            <a href="#" class="active">All</a>
-            <a  class="Front-project" href="#">Frontend</a>
-            <a  class="full-project" href="#">FullStack</a>
-            <a href="#">Photography</a>
+           <li> <a href="#" class="active">All</a> </li>
+           <li> <a  class="Front-project" href="#">Frontend</a> </li>
+           <li> <a  class="full-project" href="#">FullStack</a> </li>
+           <li> <a href="#">Photography</a> </li>
           </ul>
         </div>
       </div>    
@@ -375,10 +373,13 @@ const Portfoliosection = `
         e.preventDefault();
         main.innerHTML = '';
         main.style.background = '#000';
+        if (checkbox) {
+            checkbox.checked = false;
+        }
         main.innerHTML = Portfoliosection;
         let allpicture = document.querySelectorAll('.gallery .img');
-        
         let frontend = document.querySelector('.Front-project');
+        let fullstack = document.querySelector('.full-project');
         console.log(frontend);
         frontend.addEventListener("click", (e) => {
             allpicture.forEach((picture) => {
@@ -390,8 +391,6 @@ const Portfoliosection = `
                 }
             });
         });
-    
-        let fullstack = document.querySelector('.full-project');
         fullstack.addEventListener("click", (e) => {
             console.log("fullstack clicked");
             allpicture.forEach((picture) => {
