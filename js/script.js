@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let Services = document.querySelector('.Services');
     let Contact = document.querySelector(".Contact");
     let Portfolio = document.querySelector('.Portfolios');
-    
+
     const aboutsection = `
             <section class="About-section "  >
         <div class="aboutfirst wow fadeInLeftBig" style = " animation-delay: 0.1s;" >
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <img src="/image/WhatsApp_Image_2024-12-13_at_8.35.50_PM-removebg-preview.png" alt="Profile Image">
             </div>
             <div class="info-container">
-                <h1>UI/UX Designer & Web Developer.</h1>
+                <h1>Software Developer & Frontend Web Developer.</h1>
                 <p class="intro-text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
@@ -83,25 +83,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>
             <div class="skill">
-                <div class="skill-title">CSS</div>
-                <div class="progress-bar wow fadeInUp" style = " animation-delay: 0.1s;" >
-                    <div class="progress-bar-fill" style="--progress: 80%;">80%</div>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="skill-title">CSS</div>
-                <div class="progress-bar wow fadeInUp" style = " animation-delay: 0.1s;" >
-                    <div class="progress-bar-fill" style="--progress: 80%;">80%</div>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="skill-title">CSS</div>
-                <div class="progress-bar wow fadeInUp" style = " animation-delay: 0.1s;" >
-                    <div class="progress-bar-fill" style="--progress: 80%;">80%</div>
-                </div>
-            </div>
-            <div class="skill">
                 <div class="skill-title">JavaScript</div>
+                <div class="progress-bar wow fadeInUp" style = " animation-delay: 0.1s;" >
+                    <div class="progress-bar-fill" style="--progress: 80%;">80%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-title">Python</div>
+                <div class="progress-bar wow fadeInUp" style = " animation-delay: 0.1s;" >
+                    <div class="progress-bar-fill" style="--progress: 80%;">80%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-title">SQL</div>
+                <div class="progress-bar wow fadeInUp" style = " animation-delay: 0.1s;" >
+                    <div class="progress-bar-fill" style="--progress: 80%;">80%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-title">Bootstrap</div>
                 <div class="progress-bar wow fadeInUp" style = " animation-delay: 0.1s;" >
                     <div class="progress-bar-fill" style="--progress: 70%;">70%</div>
                 </div>
@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>
         </div>
-    </section>` 
+    </section>`
 
     About.addEventListener('click', (e) => {
         e.preventDefault();
@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
         main.innerHTML = aboutsection;
     });
 
-const resumesection = `
+    const resumesection = `
 <div class="res-section">
     <div class="res wow fadeInLeftBig ">
       <h2>Resume</h2>
@@ -259,7 +259,7 @@ const resumesection = `
         new WOW().init();
     })
 
-const servicessection = ` <section class="services-section" >
+    const servicessection = ` <section class="services-section" >
     <h2 class="services-title wow fadeInLeftBig ">Our Services</h2>
   <div class="card-container">
     <div class="card wow fadeInLeft">
@@ -288,13 +288,13 @@ const servicessection = ` <section class="services-section" >
 
     Services.addEventListener("click", (e) => {
         e.preventDefault();
-        main.innerHTML = ''; // Clear the main content
+        main.innerHTML = '';
         main.style.background = '#000';
         checkbox.checked = false;
         main.innerHTML = servicessection;
     });
     const contactsection = `<div class="contactus">
-      <h2>Portfolio</h2>
+      <h2>Contact Us</h2>
       <form>      
         <input name="name" type="text" class="feedback-input" placeholder="Name" />   
         <input name="email" type="text" class="feedback-input" placeholder="Email" />
@@ -307,9 +307,12 @@ const servicessection = ` <section class="services-section" >
         e.preventDefault();
         main.innerHTML = '';
         main.style.background = '#000';
+        if (checkbox) {
+            checkbox.checked = false;
+        }
         main.innerHTML = contactsection
     });
-const Portfoliosection = `
+    const Portfoliosection = `
     <div class="portfolio">
       <div class="port">
         <h2>Portfolio</h2>
@@ -317,10 +320,10 @@ const Portfoliosection = `
       <div class="head">
         <div class="nav">
           <ul class="categories">
-           <li> <a href="#" class="active">All</a> </li>
+           <li> <a href="#" class="all-project">All</a> </li>
            <li> <a  class="Front-project" href="#">Frontend</a> </li>
            <li> <a  class="full-project" href="#">FullStack</a> </li>
-           <li> <a href="#">Photography</a> </li>
+           <li> <a class ="photo-project href="#">Photography</a></li>
           </ul>
         </div>
       </div>    
@@ -366,6 +369,19 @@ const Portfoliosection = `
             <img src="/image/NetfixClone.png" alt="Portfolio Item 10">
             <div class="caption">Portfolio Item 10</div>
           </div>
+          
+          <div class="img photo ">
+            <img src="/image/Nature Image.jpeg" alt="Portfolio Item 10">
+            <div class="caption">Portfolio Item 10</div>
+          </div>
+          <div class="img photo">
+            <img src="/image/sunset Image.jpeg" alt="Portfolio Item 10">
+            <div class="caption">Portfolio Item 10</div>
+          </div>
+          <div class="img photo">
+            <img src="/image/Tree Image.jpeg" alt="Portfolio Item 10">
+            <div class="caption">Portfolio Item 10</div>
+          </div>
         </section>
       </div>
     </div>`
@@ -380,10 +396,11 @@ const Portfoliosection = `
         let allpicture = document.querySelectorAll('.gallery .img');
         let frontend = document.querySelector('.Front-project');
         let fullstack = document.querySelector('.full-project');
+        let photography = document.querySelector('.photo-project');
+        let allproject = document.querySelector('.all-project');
         console.log(frontend);
         frontend.addEventListener("click", (e) => {
             allpicture.forEach((picture) => {
-                console.log(picture);
                 if (picture.classList.contains("Front")) {
                     picture.style.display = "block";
                 } else {
@@ -392,13 +409,27 @@ const Portfoliosection = `
             });
         });
         fullstack.addEventListener("click", (e) => {
-            console.log("fullstack clicked");
             allpicture.forEach((picture) => {
                 if (picture.classList.contains("back")) {
                     picture.style.display = "block";
                 } else {
                     picture.style.display = "none";
                 }
+            });
+        });
+        photography.addEventListener("click", (e) => {
+            e.preventDefault();
+            allpicture.forEach((picture) => {
+                if (picture.classList.contains("photo")) {
+                    picture.style.display = "block";
+                } else {
+                    picture.style.display = "none";
+                }
+            });
+        });
+        allpicture.forEach((picture) => {
+            allproject.addEventListener("click", (e) => {
+                picture.style.display = "block";
             });
         });
     });

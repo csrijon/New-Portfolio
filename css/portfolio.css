@@ -30,7 +30,7 @@
 .categories li a {
     text-decoration: none;
     color: #fff;
-    font-size: 16px;
+    font-size: 1rem;
     transition: color 0.3s;
 }
 
@@ -91,7 +91,7 @@
         gap: 10px;
     }
     .categories li a {
-        font-size: 14px;
+        font-size: 1rem;
     }
 }
 
@@ -100,6 +100,6 @@
         grid-template-columns: 1fr;
     }
     .categories li a {
-        font-size: 12px;
+        font-size: 16px;
     }
 }
