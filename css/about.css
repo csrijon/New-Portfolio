@@ -37,6 +37,12 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+.image-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
 
 .image-container img {
   width: 300px;
@@ -44,7 +50,7 @@
   border-radius: 10px;
   object-fit: cover;
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

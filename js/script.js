@@ -9,24 +9,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const aboutsection = `
             <section class="About-section "  >
         <div class="aboutfirst wow fadeInLeftBig" style = " animation-delay: 0.1s;" >
-            <h2>About</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, consequuntur?</p>
+            <h2>About Me</h2>
+            <p>I'm an aspiring software developer who loves creating dynamic, responsive, and user-friendly web applications using modern technologies and creative design ideas.</p>
         </div>
         <section class="about-section wow fadeInUp" data-wow-delay="0.1s" style = " animation-delay: 0.2s"; >
             <div class="image-container">
-                <img src="/image/WhatsApp_Image_2024-12-13_at_8.35.50_PM-removebg-preview.png" alt="Profile Image">
+                <img src="/image/srijon_image-modified-removebg-preview.png" alt="Profile Image">
             </div>
             <div class="info-container">
                 <h1>Software Developer & Frontend Web Developer.</h1>
                 <p class="intro-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    I'm Srijon Chowdhury, currently pursuing a BCA degree at Maulana Abul Kalam Azad University of Technology, West Bengal
                 </p>
                 <div class="details">
                     <div class="left">
-                        <p><strong>Birthday:</strong> 1 May 1995</p>
-                        <p><strong>Website:</strong> www.example.com</p>
-                        <p><strong>Phone:</strong> +123 456 7890</p>
-                        <p><strong>City:</strong> New York, USA</p>
+                        <p><strong>Birthday:</strong> 8 July 2004</p>
+                         <p><strong>Website:</strong> www.example.com</p>
+                        <p><strong>Phone:</strong>+917029046473</p>
+                        <p><strong>City:</strong>Kolkata</p>
                     </div>
                     <div class="right">
                         <p><strong>Age:</strong> 30</p>
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="features-grid">
                 <div class="feature-card wow fadeInUp " style = " animation-delay: 0.1s;" >
                     <span class="feature-icon">&#x1F441;</span>
-                    <span class="feature-title">Lorem Ipsum</span>
+                    <span class="feature-title">AL Ml </span>
                 </div>
                 <div class="feature-card wow fadeInUp " style = " animation-delay: 0.2s;" >
                     <span class="feature-icon">&#x267E;</span>
