@@ -188,12 +188,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h2>Summary</h2>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <h3>BRANDON JOHNSON</h3>
+                        <h3>Srijon Chowdhury</h3>
                         <p>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</p>
                         <ul class="contact">
                             <li>Portland par 127, Orlando, FL</li>
-                            <li>(123) 456-7891</li>
-                            <li>alice.barkley@example.com</li>
+                            <li>+917029046473</li>
+                            <li>csrijon92@gmail.com</li>
                         </ul>
                     </div>
                 </div>
@@ -203,16 +203,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h2>Education</h2>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <h3>MASTER OF FINE ARTS & GRAPHIC DESIGN</h3>
-                        <p>2015 - 2016</p>
-                        <p>Rochester Institute of Technology, Rochester, NY</p>
-                        <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>BACHELOR OF FINE ARTS & GRAPHIC DESIGN</h3>
-                        <p>2010 - 2014</p>
-                        <p>Rochester Institute of Technology, Rochester, NY</p>
-                        <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis.</p>
+                        <h3>Bachelor of Computer Applications</h3>
+                        <p>2022 - 2025</p>
+                        <p>Maulana Abul Kalam Azad University of Technology, West Bengal</p>
+                        <p>Currently Pursuing BCA Degree final year</p>
                     </div>
                 </div>
             </div>
@@ -224,20 +218,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h2>Professional Experience</h2>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <h3>SENIOR GRAPHIC DESIGN SPECIALIST</h3>
-                        <p>2019 - Present</p>
-                        <p>Experion, New York, NY</p>
-                        <ul>
-                            <li>Lead in the design, development, and implementation of graphic communication materials.</li>
-                            <li>Delegate tasks to a 7-member design team.</li>
-                            <li>Supervise quality and accuracy of graphic materials.</li>
-                            <li>Manage project budgets from $2,000 - $25,000.</li>
-                        </ul>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>GRAPHIC DESIGN SPECIALIST</h3>
-                        <p>2017 - 2018</p>
-                        <p>Stepping Stone Advertising, New York, NY</p>
+                        <h3>Web Development Intern</h3>
+                        <p>6 july 2023 - Present</p>
+                        <p>Euphoria Genx, Kolkata</p>
                         <ul>
                             <li>Developed marketing programs and design presentations.</li>
                             <li>Managed up to 5 projects under pressure.</li>
