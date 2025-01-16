@@ -176,7 +176,7 @@ main {
     height: 100%;
     width: 100%;
     box-sizing: border-box ;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 
@@ -253,6 +253,9 @@ footer{
     background-color:#0f0f0f;
     z-index: 5;
     position: relative;
+    /* display: flex; */
+
+
 }
 .mainfooter{
     width: 100%;

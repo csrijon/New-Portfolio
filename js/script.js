@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
      </div>
      <div class="container">
         <!-- Left Column: Summary and Education -->
-        <div class="column wow fadeInRightBig ">
+        <div class="column wow fadeInUp ">
             <div class="section">
                 <h2>Summary</h2>
                 <div class="timeline">
@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
 
         <!-- Right Column: Professional Experience -->
-        <div class="column wow fadeInLeftBig ">
+        <div class="column wow fadeInUp ">
             <div class="section">
                 <h2>Professional Experience</h2>
                 <div class="timeline">
@@ -262,21 +262,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const servicessection = ` <section class="services-section" >
     <h2 class="services-title wow fadeInLeftBig ">Our Services</h2>
   <div class="card-container">
-    <div class="card wow fadeInLeft">
+    <div class="card wow fadeInUp">
       <div class="icon">
         <span class="material-icons">brush</span>
       </div>
       <h3>Web Design</h3>
       <p>The most modern and high-quality design made at a professional level.</p>
     </div>
-    <div class="card wow fadeInRight">
+    <div class="card wow fadeInUp">
       <div class="icon">
         <span class="material-icons">code</span>
       </div>
       <h3>Web Development</h3>
       <p>High-quality development of sites at the professional level.</p>
     </div>
-    <div class="card wow fadeInLeft">
+    <div class="card wow fadeInUp">
       <div class="icon">
         <span class="material-icons">photo_camera</span>
       </div>
@@ -294,8 +294,8 @@ document.addEventListener('DOMContentLoaded', () => {
         main.innerHTML = servicessection;
     });
     const contactsection = `<div class="contactus">
-      <h2>Contact Us</h2>
-      <form>      
+      <h2 class = "wow fadeInLeftBig" >Contact Us</h2>
+      <form  >      
         <input name="name" type="text" class="feedback-input" placeholder="Name" />   
         <input name="email" type="text" class="feedback-input" placeholder="Email" />
         <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
@@ -312,125 +312,93 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         main.innerHTML = contactsection
     });
-    const Portfoliosection = `
-    <div class="portfolio">
-      <div class="port">
-        <h2>Portfolio</h2>
-      </div>
-      <div class="head">
-        <div class="nav">
-          <ul class="categories">
-           <li> <a href="#" class="all-project">All</a> </li>
-           <li> <a  class="Front-project" href="#">Frontend</a> </li>
-           <li> <a  class="full-project" href="#">FullStack</a> </li>
-           <li> <a class ="photo-project href="#">Photography</a></li>
-          </ul>
-        </div>
-      </div>    
-      <div class="mains">
-        <section class="gallery">
-          <div class="img">
-            <img src="/image/27230.jpg" alt="Portfolio Item 1">
-            <div class="caption">Portfolio Item 1</div>
+    const portfolioItems = [
+        { img: "/image/27230.jpg", alt: "Portfolio Item 1", category: "all" },
+        { img: "https://img.freepik.com/free-photo/production-manufacture-process-chart-diagram_53876-120646.jpg", alt: "Portfolio Item 2", category: "all" },
+        { img: "/image/Portfolio.png", alt: "Portfolio Item 3", category: "all" },
+        { img: "/image/GDG Website.png", alt: "Portfolio Item 4", category: "Front" },
+        { img: "/image/Music Player.png", alt: "Portfolio Item 5", category: "all" },
+        { img: "/image/E-Learning Website.png", alt: "Portfolio Item 6", category: "all" },
+        { img: "/image/online Resturant.png", alt: "Portfolio Item 7", category: "all" },
+        { img: "/image/Currency Coverter.png", alt: "Portfolio Item 8", category: "all" },
+        { img: "/image/Analog Clock.png", alt: "Portfolio Item 9", category: "back" },
+        { img: "/image/NetfixClone.png", alt: "Portfolio Item 10", category: "all" },
+        { img: "/image/Nature Image.jpeg", alt: "Portfolio Item 11", category: "photo" },
+        { img: "/image/sunset Image.jpeg", alt: "Portfolio Item 12", category: "photo" },
+        { img: "/image/Tree Image.jpeg", alt: "Portfolio Item 13", category: "photo" }
+      ];
+      
+      const Portfoliosection = `
+        <div class="portfolio">
+          <div class="port wow fadeInLeftBig ">
+            <h2>Portfolio</h2>
           </div>
-          <div class="img">
-            <img src="https://img.freepik.com/free-photo/production-manufacture-process-chart-diagram_53876-120646.jpg" alt="Portfolio Item 2">
-            <div class="caption">Portfolio Item 2</div>
+          <div class="head">
+            <div class="nav">
+              <ul class="categories">
+                <li><a href="#" class="all-project">All</a></li>
+                <li><a class="Front-project" href="#">Frontend</a></li>
+                <li><a class="full-project" href="#">FullStack</a></li>
+                <li><a class="photo-project" href="#">Photography</a></li>
+              </ul>
+            </div>
           </div>
-          <div class="img">
-            <img src="/image/Portfolio.png" alt="Portfolio Item 3">
-            <div class="caption">Portfolio Item 3</div>
+          <div class="mains">
+            <section class="gallery"></section>
           </div>
-          <div class="img Front">
-            <img src="/image/GDG Website.png" alt="Portfolio Item 4">
-            <div class="caption">Portfolio Item 4</div>
-          </div>
-          <div class="img">
-            <img src="/image/Music Player.png" alt="Portfolio Item 5">
-            <div class="caption">Portfolio Item 5</div>
-          </div>
-          <div class="img">
-            <img src="/image/E-Learning Website.png" alt="Portfolio Item 6">
-            <div class="caption">Portfolio Item 6</div>
-          </div>
-          <div class="img">
-            <img src="/image/online Resturant.png" alt="Portfolio Item 7">
-            <div class="caption">Portfolio Item 7</div>
-          </div>
-          <div class="img">
-            <img src="/image/Currency Coverter.png" alt="Portfolio Item 8">
-            <div class="caption">Portfolio Item 8</div>
-          </div>
-          <div class="img back">
-            <img src="/image/Analog Clock.png" alt="Portfolio Item 9">
-            <div class="caption">Portfolio Item 9</div>
-          </div>
-          <div class="img">
-            <img src="/image/NetfixClone.png" alt="Portfolio Item 10">
-            <div class="caption">Portfolio Item 10</div>
-          </div>
-          
-          <div class="img photo ">
-            <img src="/image/Nature Image.jpeg" alt="Portfolio Item 10">
-            <div class="caption">Portfolio Item 10</div>
-          </div>
-          <div class="img photo">
-            <img src="/image/sunset Image.jpeg" alt="Portfolio Item 10">
-            <div class="caption">Portfolio Item 10</div>
-          </div>
-          <div class="img photo">
-            <img src="/image/Tree Image.jpeg" alt="Portfolio Item 10">
-            <div class="caption">Portfolio Item 10</div>
-          </div>
-        </section>
-      </div>
-    </div>`
-    Portfolio.addEventListener("click", (e) => {
+        </div>`;
+      
+      Portfolio.addEventListener("click", (e) => {
         e.preventDefault();
         main.innerHTML = '';
         main.style.background = '#000';
         if (checkbox) {
-            checkbox.checked = false;
+          checkbox.checked = false;
         }
         main.innerHTML = Portfoliosection;
+      
+        const gallery = document.querySelector('.gallery');
+        
+        portfolioItems.forEach(item => {
+          const itemElement = document.createElement('div');
+          itemElement.className = `img ${item.category} wow fadeInUp`;
+          itemElement.innerHTML = `
+            <img src="${item.img}" alt="${item.alt}">
+            <div class="caption">${item.alt}</div>
+          `;
+          gallery.appendChild(itemElement);
+        });
+      
         let allpicture = document.querySelectorAll('.gallery .img');
         let frontend = document.querySelector('.Front-project');
         let fullstack = document.querySelector('.full-project');
         let photography = document.querySelector('.photo-project');
         let allproject = document.querySelector('.all-project');
-        console.log(frontend);
-        frontend.addEventListener("click", (e) => {
-            allpicture.forEach((picture) => {
-                if (picture.classList.contains("Front")) {
-                    picture.style.display = "block";
-                } else {
-                    picture.style.display = "none";
-                }
-            });
+      
+        frontend.addEventListener("click", () => {
+          allpicture.forEach(picture => {
+            picture.style.display = picture.classList.contains("Front") ? "block" : "none";
+          });
         });
-        fullstack.addEventListener("click", (e) => {
-            allpicture.forEach((picture) => {
-                if (picture.classList.contains("back")) {
-                    picture.style.display = "block";
-                } else {
-                    picture.style.display = "none";
-                }
-            });
+      
+        fullstack.addEventListener("click", () => {
+          allpicture.forEach(picture => {
+            picture.style.display = picture.classList.contains("back") ? "block" : "none";
+          });
         });
+      
         photography.addEventListener("click", (e) => {
-            e.preventDefault();
-            allpicture.forEach((picture) => {
-                if (picture.classList.contains("photo")) {
-                    picture.style.display = "block";
-                } else {
-                    picture.style.display = "none";
-                }
-            });
+          e.preventDefault();
+          allpicture.forEach(picture => {
+            picture.style.display = picture.classList.contains("photo") ? "block" : "none";
+          });
         });
-        allpicture.forEach((picture) => {
-            allproject.addEventListener("click", (e) => {
-                picture.style.display = "block";
-            });
+      
+        allproject.addEventListener("click", () => {
+          allpicture.forEach(picture => {
+            picture.style.display = "block";
+          });
         });
-    });
+      });
+      
 });

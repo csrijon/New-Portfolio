@@ -34,20 +34,24 @@
     transition: color 0.3s;
 }
 
-.categories li a.active,
-.categories li a:hover {
-    color: #0f0;
+
+.categories li a:focus{
+    color: white;
+    transition: background-color 0.3s ease, padding 0.3s ease, border-radius 0.3s ease;
+    padding: 5px;
+    background-color: #18d26e;
+    border-radius: 22px;
 }
 
 .gallery {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to next row */
+    flex-wrap: wrap; 
     gap: 15px;
-    justify-content: center; /* Center align gallery items */
+    justify-content: center; 
     padding: 20px;
 }
 .img {
-    position: relative; /* Required for positioning the caption */
+    position: relative; 
     flex: 1 1 400px;
     max-width: 400px;
     box-sizing: border-box;
@@ -76,7 +80,7 @@
 }
 
 .img:hover .caption {
-    opacity: 1; /* Show caption on hover */
+    opacity: 1; 
 }
 
 .img img:hover {
