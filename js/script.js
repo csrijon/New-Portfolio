@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const aboutsection = `
             <section class="About-section "  >
         <div class="aboutfirst wow fadeInLeftBig" style = " animation-delay: 0.1s;" >
-            <h2>About Me</h2>
+            <h2>About Us</h2>
             <p>I'm an aspiring software developer who loves creating dynamic, responsive, and user-friendly web applications using modern technologies and creative design ideas.</p>
         </div>
         <section class="about-section wow fadeInUp" data-wow-delay="0.1s" style = " animation-delay: 0.2s"; >
@@ -313,16 +313,16 @@ document.addEventListener('DOMContentLoaded', () => {
       
       const Portfoliosection = `
         <div class="portfolio">
-          <div class="port wow fadeInLeftBig ">
+          <div class="port wow fadeInLeftBig">
             <h2>Portfolio</h2>
           </div>
           <div class="head">
             <div class="nav">
               <ul class="categories">
                 <li><a href="#" class="all-project">All</a></li>
-                <li><a class="Front-project" href="#">Frontend</a></li>
-                <li><a class="full-project" href="#">FullStack</a></li>
-                <li><a class="photo-project" href="#">Photography</a></li>
+                <li><a href="#" class="Front-project">Frontend</a></li>
+                <li><a href="#" class="full-project">FullStack</a></li>
+                <li><a href="#" class="photo-project">Photography</a></li>
               </ul>
             </div>
           </div>
@@ -341,16 +341,19 @@ document.addEventListener('DOMContentLoaded', () => {
         main.innerHTML = Portfoliosection;
       
         const gallery = document.querySelector('.gallery');
-        
+        const fragment = document.createDocumentFragment();
+      
         portfolioItems.forEach(item => {
           const itemElement = document.createElement('div');
-          itemElement.className = `img ${item.category} wow fadeInUp`;
+          itemElement.className = `img ${item.category}`;
           itemElement.innerHTML = `
-            <img src="${item.img}" alt="${item.alt}">
+            <img loading="lazy" src="${item.img}" alt="${item.alt}">
             <div class="caption">${item.alt}</div>
           `;
-          gallery.appendChild(itemElement);
+          fragment.appendChild(itemElement);
         });
+      
+        gallery.appendChild(fragment);
       
         let allpicture = document.querySelectorAll('.gallery .img');
         let frontend = document.querySelector('.Front-project');
@@ -358,30 +361,20 @@ document.addEventListener('DOMContentLoaded', () => {
         let photography = document.querySelector('.photo-project');
         let allproject = document.querySelector('.all-project');
       
-        frontend.addEventListener("click", () => {
+        const filterItems = (filterClass) => {
           allpicture.forEach(picture => {
-            picture.style.display = picture.classList.contains("Front") ? "block" : "none";
+            picture.style.display = picture.classList.contains(filterClass) ? "block" : "none";
           });
-        });
+        };
       
-        fullstack.addEventListener("click", () => {
-          allpicture.forEach(picture => {
-            picture.style.display = picture.classList.contains("back") ? "block" : "none";
-          });
-        });
-      
+        frontend.addEventListener("click", () => filterItems("Front"));
+        fullstack.addEventListener("click", () => filterItems("back"));
         photography.addEventListener("click", (e) => {
           e.preventDefault();
-          allpicture.forEach(picture => {
-            picture.style.display = picture.classList.contains("photo") ? "block" : "none";
-          });
+          filterItems("photo");
         });
-      
         allproject.addEventListener("click", () => {
-          allpicture.forEach(picture => {
-            picture.style.display = "block";
-          });
+          allpicture.forEach(picture => picture.style.display = "block");
         });
       });
-      
-});
+    })      
