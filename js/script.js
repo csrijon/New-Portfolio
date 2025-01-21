@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+// document.addEventListener('DOMContentLoaded', () => {
     let Resume = document.querySelector('.Resume');
     let About = document.querySelector('.About');
     let main = document.querySelector('main');
@@ -298,17 +298,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const portfolioItems = [
         { img: "/image/27230.jpg", alt: "Portfolio Item 1", category: "all" },
         { img: "https://img.freepik.com/free-photo/production-manufacture-process-chart-diagram_53876-120646.jpg", alt: "Portfolio Item 2", category: "all" },
-        { img: "/image/Portfolio.png", alt: "Portfolio Item 3", category: "all" },
-        { img: "/image/GDG Website.png", alt: "Portfolio Item 4", category: "Front" },
-        { img: "/image/Music Player.png", alt: "Portfolio Item 5", category: "all" },
-        { img: "/image/E-Learning Website.png", alt: "Portfolio Item 6", category: "all" },
-        { img: "/image/online Resturant.png", alt: "Portfolio Item 7", category: "all" },
-        { img: "/image/Currency Coverter.png", alt: "Portfolio Item 8", category: "all" },
-        { img: "/image/Analog Clock.png", alt: "Portfolio Item 9", category: "back" },
-        { img: "/image/NetfixClone.png", alt: "Portfolio Item 10", category: "all" },
-        { img: "/image/Nature Image.jpeg", alt: "Portfolio Item 11", category: "photo" },
-        { img: "/image/sunset Image.jpeg", alt: "Portfolio Item 12", category: "photo" },
-        { img: "/image/Tree Image.jpeg", alt: "Portfolio Item 13", category: "photo" }
+        { img: "/image/Portfolio.png", alt: "Portfolio", category: "all" },
+        { img: "/image/GDG Website.png", alt: "GDG Website", category: "Front" },
+        { img: "/image/Music Player.png", alt: "Music Player", category: "all" },
+        { img: "/image/E-Learning Website.png", alt: "Learning Website", category: "all" },
+        { img: "/image/online Resturant.png", alt: "Online Resturant", category: "all" },
+        { img: "/image/Currency Coverter.png", alt: "Currency Coverter", category: "all" },
+        { img: "/image/Analog Clock.png", alt: "Analog Clock", category: "back" },
+        { img: "/image/NetfixClone.png", alt: "NetfixClone", category: "all" },
+        { img: "/image/Nature Image.jpeg", alt: "Mobile Photography", category: "photo" },
+        { img: "/image/sunset Image.jpeg", alt: "Mobile Photography", category: "photo" },
+        { img: "/image/Tree Image.jpeg", alt: "Mobile Photography", category: "photo" }
       ];
       
       const Portfoliosection = `
@@ -377,4 +377,6 @@ document.addEventListener('DOMContentLoaded', () => {
           allpicture.forEach(picture => picture.style.display = "block");
         });
       });
-    })      
+
+    let 
+      
